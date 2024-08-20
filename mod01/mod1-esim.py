@@ -1,2 +1,1 @@
-
-print("Moro maailma!")
+print("Hei, Ilia Chebanik!")
