@@ -5,12 +5,15 @@ import random
 print(f'Terve, {input("Nimesi: ")}!')
 
 # 2
-print(f' {math.pi*float(input("Ympyrän säte: "))**2}')
+print(f'Ympyrän pinta-ala on {math.pi*float(input("Ympyrän säte: "))**2:.3f}')
 
 # 3
-a=float(input('a: '))
-b=float(input('b: '))
-print(f'Suorakulmion piirin ja pinta-alan = {(a+b)*2} ja {a*b}')
+(lambda a,b: print(f'Suorakulmion piirin ja pinta-alan = {(a+b)*2} ja {a*b}'))(*map(float, [input(f"Numero {i}: ") for i in range(1,3)]))
+
+# a=float(input('a: '))
+# b=float(input('b: '))
+# print(f'Suorakulmion piirin ja pinta-alan = {(a+b)*2} ja {a*b}')
+
 
 # 4
 a = float(input("a:"))
