@@ -28,7 +28,7 @@ c = float(input("Anna luodit.\n"))
 
 print("Massa nykymittojen mukaan:")
 s = (((a*20+b)*32)+c)*13.3
-print(f'{int((s-s%1000)/1000)} kilogrammaa ja {round(s%1000,2)} grammaa. ')
+print(f'{int(s//1000)} kilogrammaa ja {round(s%1000,2)} grammaa. ')
 
 # 6
 print(random.randint(0,1000))

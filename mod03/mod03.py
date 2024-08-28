@@ -20,20 +20,27 @@ else:
 # 3
 s = input("käyttäjän biologisen sukupuolen (Mies/Nainen): ")
 h = int(input("käyttäjän hemoglobiiniarvon (g/l): "))
-if s == "Nainen":
-    if h < 117:
-        print("Hemoglobiiniarvo alhainen")
-    elif 117 <= h <= 175:
-        print("Hemoglobiiniarvo normaali")
-    elif h >= 175:
-        print("Hemoglobiiniarvo korkea")
-elif s == "Mies":
-    if h < 134:
-        print("Hemoglobiiniarvo alhainen")
-    elif 134 <= h <= 195:
-        print("Hemoglobiiniarvo normaali")
-    elif h >= 195:
-        print("Hemoglobiiniarvo korkea")
+
+r1, r2 = (117, 175) if s == "Nainen" else (134, 195)
+result = "alhainen" if h<r1 else "normaali" if r1 <= h <= r2 else "korkea"
+print(f"Hemoglobiiniarvo {result}")
+
+# s = input("käyttäjän biologisen sukupuolen (Mies/Nainen): ")
+# h = int(input("käyttäjän hemoglobiiniarvon (g/l): "))
+# if s == "Nainen":
+#     if h < 117:
+#         print("Hemoglobiiniarvo alhainen")
+#     elif 117 <= h <= 175:
+#         print("Hemoglobiiniarvo normaali")
+#     elif h > 175:
+#         print("Hemoglobiiniarvo korkea")
+# elif s == "Mies":
+#     if h < 134:
+#         print("Hemoglobiiniarvo alhainen")
+#     elif 134 <= h <= 195:
+#         print("Hemoglobiiniarvo normaali")
+#     elif h > 195:
+#         print("Hemoglobiiniarvo korkea")
 
 # 4
 y = int(input("Vuosi: "))
